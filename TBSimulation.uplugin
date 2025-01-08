@@ -1,0 +1,71 @@
+﻿{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Simulation Toolbox",
+	"Description": "Simulation management system for running game system simulations locally or with network prediction.",
+	"Category": "Toolbox Plugins",
+	"CreatedBy": "Lewis Scrivens",
+	"CreatedByURL": "https://lewisscrivens.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "TBSimulation",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"StructUtils"
+			]
+		},
+		{
+			"Name": "TBSimulationDebug",
+			"Type": "Runtime",
+			"LoadingPhase": "None",
+			"AdditionalDependencies": [
+				"DebugToolbox",
+				"ImGui"
+			],
+			"TargetConfigurationDenyList":
+			[
+				"Shipping"
+			]
+		},
+		{
+			"Name": "TBSimulationEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "GameplayTagsEditor",
+			"Enabled": true,
+			"Optional": false
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true,
+			"Optional": false
+		},
+		{
+			"Name": "DataValidation",
+			"Enabled": true,
+			"Optional": false
+		},
+		{
+			"Name": "StructUtils",
+			"Enabled": true,
+			"Optional": false
+		},
+		{
+			"Name": "DebugToolbox",
+			"Enabled": false,
+			"Optional": true
+		}
+	]
+}
